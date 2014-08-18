@@ -23,6 +23,8 @@ import com.thoughtworks.selenium.CommandProcessor;
 import com.thoughtworks.selenium.HttpCommandProcessor;
 import com.thoughtworks.selenium.SeleniumException;
 import com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -192,7 +194,19 @@ public class SeleniumDriverFixture {
 		this.screenCapture = screenCapture;
 	}
 
-	/**
+    /**
+     * <p><code>
+     * | scroll page down | <i>htmlElement</i> |
+     * </code></p>
+     *
+     * @param htmlElement
+     *
+     */
+    public void scrollPageDown(String htmlElement){
+        ((JavascriptExecutor)this.getWebDriver()).executeScript("document.getElementsByTagName('"+htmlElement+"')[0].scrollIntoView(false);" ,"");
+    }
+
+    /**
 	 * <p><code>
 	 * | set timeout to | 500 |
 	 * </code></p>
