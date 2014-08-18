@@ -2,3 +2,4 @@ box: mihkels/java8-oracle@0.0.1
 build:
   steps:
     - ejt/maven@0.0.1
+        target: clean compile package
