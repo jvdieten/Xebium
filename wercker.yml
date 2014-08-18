@@ -4,4 +4,4 @@ build:
     - script:
         name: Xebium clean compile package
         code: |
-            mvn clean compile package
+            mvn clean compile package -P jar-with-dependencies
