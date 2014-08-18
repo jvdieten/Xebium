@@ -1,5 +1,7 @@
 box: mihkels/java8-oracle@0.0.1
 build:
   steps:
-    - ejt/maven@0.0.1
-       name: clean compile package
+    - script:
+        name: show base information
+        code: |
+            mvn clean compile
