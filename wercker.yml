@@ -5,5 +5,5 @@ build:
             name: Xebium clean compile package
             code: |
                 mvn clean compile package -P jar-with-dependencies
-        - anka-sirota/setup-ssh@0.1.0
+        - anka-sirota/setup-ssh@0.0.4
 
