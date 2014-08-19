@@ -9,3 +9,7 @@ build:
             host: $SSH_HOST
             username: $SSH_USER
             private-key: $PRIVATE_KEY
+        - script:
+            name: ssh check
+            code: |
+                echo $WERCKER_SSH
