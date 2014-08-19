@@ -5,8 +5,8 @@ build:
             name: Xebium clean compile package
             code: |
                 mvn clean compile package -P jar-with-dependencies
-        - rsync-deploy:
-            host: fitnesse.malmberg.nl
+        - sjoerdmulder/rsync-deploy@0.1.0:
+            host: $SSH_HOST
             directory: /var/www
             sshkey: $PRIVATE_KEY
             source: $WERCKER_OUTPUT_DIR
